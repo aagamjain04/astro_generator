@@ -1,0 +1,71 @@
+# Byte-compiled / cached files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+eggs/
+*.egg
+
+# Virtual environments and environment files
+.env
+.env.*
+.venv/
+venv/
+env/
+ENV/
+Pipfile.lock
+
+# Pytest / coverage / type-checker
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.nox/
+.mypy_cache/
+.dmypy.json
+.pyre/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# macOS
+.DS_Store
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# Secrets and keys
+secrets.json
+credentials.json
+*.pem
+*.key
+*.crt
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Generated files (PDFs, build artifacts)
+*.pdf
+
+# Node (if the project ever includes frontend tooling)
+node_modules/
+
+# Misc
+*.bak
+*.swp
+
+# Keep the repo clean of local path folders
+path/to/
+

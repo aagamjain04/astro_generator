@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Astrology Report</title>
+    <style>
+        body { font-family: 'Helvetica', sans-serif; color: #333; line-height: 1.6; padding: 40px; }
+        h1 { color: #2C3E50; border-bottom: 2px solid #E74C3C; padding-bottom: 10px; }
+        h2 { color: #2980B9; margin-top: 30px; }
+        .intro { background: #ECF0F1; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
+        .planet-block { margin-bottom: 25px; padding: 15px; border-left: 4px solid #8E44AD; background: #F9F9F9; }
+        .planet-title { font-weight: bold; font-size: 1.2em; color: #8E44AD; }
+    </style>
+</head>
+<body>
+
+<h1>Astrological Birth Report</h1>
+
+<div class="intro">
+    <p><strong>Prepared for:</strong> {{ user.full_name }}</p>
+    <p><strong>Birth Details:</strong> {{ user.date_of_birth }} at {{ user.time_of_birth }}</p>
+    <p><strong>Location:</strong> {{ user.city }}, {{ user.country }}</p>
+</div>
+
+<h2>Your Core Identity</h2>
+<p><strong>Ascendant (Rising Sign): {{ ascendant }}</strong></p>
+<p>{{ report_content.ascendant_text }}</p>
+
+<h2>Planetary Placements</h2>
+{% for item in planet_texts %}
+<div class="planet-block">
+    <div class="planet-title">{{ item.planet }} in {{ item.sign }} (House {{ item.house }})</div>
+    <p>{{ item.interpretation }}</p>
+</div>
+{% endfor %}
+
+</body>
+</html>
